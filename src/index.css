@@ -1,0 +1,79 @@
+/* ── Reset ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* ── Fonts ── */
+:root {
+  --font-display: 'DM Serif Display', serif;
+  --font-body: 'Outfit', sans-serif;
+  --font-mono: 'DM Mono', monospace;
+}
+
+/* ── Dark theme (default) ── */
+[data-theme="dark"] {
+  --bg:        #0a0a0f;
+  --bg2:       #111118;
+  --bg3:       #1a1a24;
+  --card:      #15151e;
+  --card2:     #1d1d2a;
+  --border:    rgba(255,255,255,0.07);
+  --border-hover: rgba(255,255,255,0.15);
+  --text:      #f0f0f8;
+  --muted:     #8888aa;
+  --accent:    #5b8fff;
+  --accent2:   #a78bfa;
+  --accent3:   #34d399;
+  --accent-bg: rgba(91,143,255,0.08);
+  --nav-bg:    rgba(10,10,15,0.85);
+  --grid-line: rgba(255,255,255,0.04);
+  --hero-glow1: rgba(26,42,94,0.2);
+  --hero-glow2: rgba(42,26,94,0.13);
+  --tag-bg:    #1a1a24;
+  --tag-hi-bg: rgba(91,143,255,0.1);
+  --tag-hi-border: rgba(91,143,255,0.3);
+  --toggle-bg: #1d1d2a;
+}
+
+/* ── Light theme ── */
+[data-theme="light"] {
+  --bg:        #f8f8fc;
+  --bg2:       #f0f0f8;
+  --bg3:       #e8e8f4;
+  --card:      #ffffff;
+  --card2:     #f4f4fc;
+  --border:    rgba(0,0,0,0.08);
+  --border-hover: rgba(0,0,0,0.18);
+  --text:      #0d0d1a;
+  --muted:     #5a5a7a;
+  --accent:    #3a6ff8;
+  --accent2:   #7c5ce8;
+  --accent3:   #10b981;
+  --accent-bg: rgba(58,111,248,0.06);
+  --nav-bg:    rgba(248,248,252,0.88);
+  --grid-line: rgba(0,0,0,0.04);
+  --hero-glow1: rgba(91,143,255,0.08);
+  --hero-glow2: rgba(167,139,250,0.06);
+  --tag-bg:    #ebebf5;
+  --tag-hi-bg: rgba(58,111,248,0.08);
+  --tag-hi-border: rgba(58,111,248,0.3);
+  --toggle-bg: #e4e4f0;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  overflow-x: hidden;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg2); }
+::-webkit-scrollbar-thumb { background: var(--border-hover); border-radius: 3px; }
+
+/* ── Selection ── */
+::selection { background: var(--accent); color: #fff; }
